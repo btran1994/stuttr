@@ -1,0 +1,752 @@
+/* stylesheet for splash page i.e. login/signup */
+
+.splash-main {
+    display: flex;
+    width: 100%;
+    background-size: contain;
+}
+
+.root {
+    width: 100%;
+    height: 100vh;
+    min-height: 1080px;
+}
+
+.main {
+
+    position: fixed;
+}
+
+
+.splash-header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 100%;
+    height: 64px;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 900;
+}
+
+.login-signup a {
+    text-decoration: none;
+    display: flex;
+}
+
+.splash-header input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.splash-upload {
+    margin-right: 10px;
+    margin-top: 12px;
+    height: 35px;
+    width: 35px;
+    background-position: center;
+    z-index: 900000;
+    color: white;
+}
+
+.upload {
+    margin-right: 10px;
+    margin-top: 12px;
+    height: 35px;
+    width: 35px;
+    background-position: center;
+    /* z-index: 900000; */
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 64%;
+    transform: translate(-50%, -50%);
+
+}
+
+.splash-header > h1 {
+    color: white;
+    font-size: 40px;
+    margin-left: 20px;
+    padding: 3px;
+}
+
+
+.main {
+    display: flex;
+    width: 100%;
+}
+
+.login-signup {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 64px;
+    justify-content: flex-end;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .6);
+
+}
+
+
+nav {
+    color: white;
+}
+
+
+
+#root {
+    display: flex;
+    height: 100vh;
+    /* background: linear-gradient(rgb(58, 58, 58), rgba(255, 255, 255, 0)); */
+
+}
+
+.form-container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    /* background-image: url('./images/wallhaven-6qmz6w.png'); */
+    /* background-position: center; */
+    
+}
+
+.login-form-container {
+    /* justify-self: flex-end; */
+    position: fixed;
+    /* left: 50%;
+    top: 50%;
+    transform: translateX(-50%); */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: transparent;
+    margin-top: 48px;
+    max-height: fit-content;
+    top: 0;
+    z-index: 900;
+    
+    /* background-color: blue; */
+    
+   
+}
+
+.img {
+    height: 50px;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.login-form-box {
+    /* justify-self: center;
+    align-self: center; */
+    display: flex;
+    position: relative;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 20px;
+    height: 300px;
+    width: 320px;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+
+    
+
+}
+
+.login-display {
+    height: 10px;
+    margin: 10px;
+}
+
+.login-form > label {
+    display: flex;
+    padding: 20px;
+    border: 1px gray solid;
+    border-radius: 5px;
+}
+
+.format-username {
+    position: relative;
+    border: 1px gray solid;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.format-username:focus-within {
+    border: 1px blue solid;
+}
+
+.format-username:focus-within .username-box {
+    color: blue;
+    font-size: 12px;
+}
+
+.username-box {
+    margin-top: 5px;
+    margin-left: 5px;
+    justify-self: left;
+    color: gray;
+    position: absolute;
+}
+
+.format-password {
+    position: relative;
+    border: 1px gray solid;
+    display: flex;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.format-password:focus-within {
+    border: 1px blue solid;
+}
+
+.format-password:focus-within .password-box {
+    color: blue;
+    font-size: 12px;
+}
+
+.password-box {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    justify-self: left;
+    color: gray;
+}
+
+.login-input {
+    position: absolute;
+    margin: 10px;
+    border: none;
+    background: transparent;
+    width: 90%;
+    bottom: 0;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input:focus {
+    outline:none;
+}
+
+.username-box{
+    align-content: center;
+    background: transparent;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.session-submit {
+    margin-top: 5px;
+    background-color: #128fdc;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.signup-button {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    color: black;
+    border: 1px white solid;
+    background-color: white;
+    border-radius: 5px;
+    min-width: 80px;
+    line-height: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 60%;
+    z-index: 300;
+
+}
+
+.signup-button-center-text {
+}
+
+.login-button {
+     margin: 20px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.splash-header h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h6 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header-name {
+    margin-right: 30px;
+    color: white;
+    margin-top: 22px;
+}
+
+.header-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-button {
+    margin-right: 15px;
+    height: fit-content;
+    margin-top: 24px;
+}
+
+.header-buttons {
+    width: 100%;
+    height: 64px;
+}
+
+.errors {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.demo-button {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 48px;
+    z-index: 900;
+}
+
+/* .footer a {
+    width: 100%;
+    height: 100%;
+} */
+
+.git-link {
+    max-height: 100%;
+    width: 48px;
+    z-index: 100;
+    /* background-image: url('./images//git_icon.jpg'); */
+    background-position: center;
+  
+}
+
+
+.footer img {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+}
+
+
+/* SLIDESHOW CSS */
+
+
+.cb-slideshow{ 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    animation: imageAnimation 84s linear infinite 0s; 
+    z-index: -1;
+}
+
+
+.cb-slideshow li:nth-child(1) span {
+    background-image: url('https://w.wallhaven.cc/full/96/wallhaven-967rgd.jpg');
+}
+
+.cb-slideshow li:nth-child(2) span {
+    background-image: url('https://w.wallhaven.cc/full/ey/wallhaven-eyvx8l.jpg');
+    animation-delay: 6s;
+}
+
+.cb-slideshow li:nth-child(3) span {
+    background-image: url('https://w.wallhaven.cc/full/ox/wallhaven-ox678m.jpg');
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+    background-image: url('https://w.wallhaven.cc/full/p2/wallhaven-p2zx13.jpg');
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) span {
+    background-image: url('https://w.wallhaven.cc/full/g8/wallhaven-g8xzwe.jpg');
+    animation-delay: 24s;
+}
+.cb-slideshow li:nth-child(6) span {
+    background-image: url('https://w.wallhaven.cc/full/6q/wallhaven-6qmz6w.png');
+    animation-delay: 30s;
+}
+.cb-slideshow li:nth-child(7) span {
+    background-image: url('https://w.wallhaven.cc/full/w8/wallhaven-w8q27r.jpg');
+    animation-delay: 36s;
+}
+.cb-slideshow li:nth-child(8) span {
+    background-image: url('https://w.wallhaven.cc/full/4d/wallhaven-4dvw1m.jpg');
+    animation-delay: 42s;
+}
+.cb-slideshow li:nth-child(9) span {
+    background-image: url('https://w.wallhaven.cc/full/5w/wallhaven-5w6319.jpg');
+    animation-delay: 48s;
+}
+.cb-slideshow li:nth-child(10) span {
+    background-image: url('https://w.wallhaven.cc/full/ym/wallhaven-ymwggg.jpg');
+    animation-delay: 54s;
+}
+.cb-slideshow li:nth-child(11) span {
+    background-image: url('https://w.wallhaven.cc/full/39/wallhaven-39gogv.jpg');
+    animation-delay: 60s;
+}
+.cb-slideshow li:nth-child(12) span {
+    background-image: url('https://w.wallhaven.cc/full/p8/wallhaven-p8gj8j.jpg');
+    animation-delay: 66s;
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    4% { opacity: 1; animation-timing-function: ease-out; }
+    8% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+
+.footer div {
+    height: 100%;
+    width: 100%;
+}
+
+.fab.fa-github {
+    height: 20px;
+    width: 20px;
+}
+
+.home-button {
+    position: fixed;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    margin-top: 15px;
+    margin-left: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 300;
+}
+
+
+
+/* PHOTO INDEX CSS */
+
+.photo-display {
+    display: flex;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 70px;
+    padding-bottom: 55px;
+    justify-content: center;
+    background-color: rgb(58, 58, 58);
+    margin-bottom: 40px;
+    align-content: flex-start;
+}
+
+.splash-stuff {
+    display: flex;
+    position: fixed;
+    width: 100%;
+}
+
+.photo-display li {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.photo-display img {
+    height: 250px;
+    background: transparent no-repeat center;
+    background-size: cover;
+    /* margin: 10px; */
+}
+
+.photo-stuff {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    visibility: hidden;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 1;
+}
+
+
+.photo-info-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    /* margin-left: 2px;
+    margin-right: 2px; */
+    width: 100%;
+}
+
+.photo-info-background {
+    position: absolute;
+    color: transparent;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(rgba(255, 255, 255, 0), #000000);
+    visibility: hidden;
+    bottom: 2px;
+    z-index: 0;
+}
+
+.photo-info-container img:hover {
+    cursor: pointer;
+}
+
+.photo-info-container:hover .photo-stuff {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.photo-info-container:hover .photo-info-background {
+    visibility: visible;
+    cursor: pointer;
+}
+
+
+/* PHOTO SHOW CSS */
+
+.photo-show {
+    /* align-self: center;
+    display: block;
+    justify-content: center;
+    left: 40%;
+    transform: translateX(40%); */
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(58, 58, 58); */
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    /* align-items: flex-start; */
+}
+
+.photo-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    max-height: 70%;
+    padding-top: 110px;
+    padding-bottom: 50px;
+    background-color: rgb(58, 58, 58);
+}
+
+.photo-show img {
+    align-self: center;
+    max-width: 80%;
+    max-height: 100%;
+}
+
+.photo-title-description {
+    display: flex;
+    left: 0;
+}
+
+
+.photo-user {
+    /* position: absolute; */
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.photo-description {
+    padding-left: 16px;
+}
+
+
+/* UPLOAD BUTTON */
+
+.upload:hover {
+    cursor: pointer;
+}
+
+.splash-upload:hover {
+    cursor: pointer;
+}
+
+#file-upload {
+    display: none;
+}
+
+
+/* MODAL STYLE */
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    display: flex;
+}
+
+.modal-child {
+    width: 80%;
+    height: 80%;
+    min-width: 400px;
+    min-height: 400px;
+    position: absolute;
+    display: flex;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+/* UPLOAD FORM */
+
+.upload-form {
+    /* position: absolute; */
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.uploady {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.uploady h1 {
+    margin-left: 10px;
+}
+
+.img-preview {
+    max-width: 80%;
+    height: 60%;
+    z-index: 1;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-preview {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea#styled {
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title-input {
+    width: 80%;
+}
+
+.description-input {
+    width: 80%;
+}
+
+.upload-text {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.submit-photo:hover {
+    cursor: pointer;
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+/* PROFILE PIC CSS */
+
+.profile-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    overflow: hidden;
+    background-image: url('https://pbs.twimg.com/media/EIetSznWsAA1Ija.jpg');
+    background-position: center;
+    background-size: 85px;
+    background-repeat: no-repeat;
+    margin-top: 16px;
+    margin-left: 16px;
+
+}

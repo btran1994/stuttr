@@ -1,0 +1,14 @@
+<% if logged_in? %>
+  <script id="bootstrap-current-user" type="text/javascript">
+  	window.currentUser = <%= render("api/users/user.json.jbuilder",
+      user: current_user).html_safe %>
+    
+  </script>
+<% end %>
+<script>
+  window.git = '<%= image_url('github.png') %>';
+  window.upload = '<%= image_url('cloud.png') %>'
+  window.blackUpload = '<%= image_url('black-cloud.png') %>'
+</script>
+
+<main id="root"></main>
