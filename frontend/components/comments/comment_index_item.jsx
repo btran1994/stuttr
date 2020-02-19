@@ -1,8 +1,10 @@
 import React from "react";
 
 const CommentIndexItem = props => {
+    // console.log(props, 'index item props')
     const {
         comment,
+        username,
         currentUserId,
         destroyComment, 
         openModal
@@ -10,7 +12,7 @@ const CommentIndexItem = props => {
 
     return (
         <li className="comment-list-item">
-            <h1>{comment.user.username}</h1>
+            <h1>{username}</h1>
             <p>{comment.body}</p>
         </li>
     )

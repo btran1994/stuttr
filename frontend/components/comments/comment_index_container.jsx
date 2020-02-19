@@ -4,10 +4,11 @@ import CommentIndex from "./comment_index";
 import { fetchComments, destroyComment } from "../../actions/comment_actions";
 
 const mapState = ( state, ownProps ) => {
-    debugger
+    // console.log(state, 'container state')
     return {
         comments: Object.values(state.entities.comments),
-        currentUserId: state.session.currentUserId
+        currentUserId: state.session.id,
+        username: state.entities.users[state.session.id].username
     }
 }
 
