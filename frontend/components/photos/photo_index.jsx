@@ -1,8 +1,10 @@
 import React, { useReducer } from 'react';
+import Spinner from "../loader/loader_component"
 
 class PhotoIndex extends React.Component {
     constructor(props) {
         super(props);
+        
         this.handleClick = this.handleClick.bind(this)
     }
 

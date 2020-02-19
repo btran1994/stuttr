@@ -41,13 +41,14 @@ class CommentForm extends React.Component {
             <div className="comment-form-container">
                 <form className="comment-form" onSubmit={this.handleSubmit.bind(this)}>
                     <textarea
-                        rows="4"
+                        rows="6"
+                        cols="50"
                         placeholder="Add a new comment..."
                         value={this.state.body}
                         onChange={this.update("body")}>
                     </textarea>
                     <br />
-                    <input type="submit" value="ADD BOPPIN COMMENT" />
+                    <input className="comment-submit" type="submit" value="Add a Comment" />
                 </form>
                 {this.renderErrors()}
             </div>

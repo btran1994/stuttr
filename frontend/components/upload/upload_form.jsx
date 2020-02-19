@@ -4,7 +4,6 @@ class UploadForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = this.props.photo
-        // console.log(this.props, 'props')
     }
 
     handleClick() {
@@ -51,37 +50,58 @@ class UploadForm extends React.Component {
     }
 
     render() {
-        // console.log(this.state, 'imageurl')
         return (
-            <div className="uploady">
-                <h1 className="upload-text">Upload Photo:</h1>
-                <form onSubmit={this.handleSubmit.bind(this)} className="upload-form">
-                    <br/>
-                    <h1>
-                        Title:
-                    </h1>
-                    <input onChange={this.update('title')} type="text" className="title-input"/>
-                    <br/>
-                    <h1>
-                        Description:
-                    </h1>
-                    <textarea onChange={this.update('description')} className="description-input" id="" cols="30" rows="10"></textarea>
-                    <br/>
-                    <input type="submit" className="submit-photo" value="Upload Photo"/>
-                    <br/>
-                    <br/>
-                </form>
-                <div>
-                    <img className="upload" onClick={this.handleClick} src={window.blackUpload} alt="" />
-                    <input id="file-upload" type="file" onChange={this.handleUpload.bind(this)} />  
-                </div>
-                <div className="image-preview">
-                    <h1>Image Preview:</h1>
-                    <img className="img-preview" src={this.state.imageUrl} alt=""/>
-                </div>
+          <div className="uploady">
+            <h1 className="upload-text">Upload Photo:</h1>
+            <form
+              onSubmit={this.handleSubmit.bind(this)}
+              className="upload-form"
+            >
+              <br />
+              <h1 className="upload-title">Title:</h1>
+              <input
+                onChange={this.update("title")}
+                type="text"
+                autoFocus="autofocus"
+                className="title-input"
+              />
+              <br />
+              <h1 className="upload-description">Description:</h1>
+              <textarea
+                onChange={this.update("description")}
+                className="description-input"
+                id=""
+                cols="30"
+                rows="5"
+              ></textarea>
+              <br />
+              <input
+                type="submit"
+                className="submit-photo"
+                value="Upload Photo"
+              />
+              <br />
+              <br />
+            </form>
+            <div className="image-preview">
+              <div>
+                <img
+                  className="upload"
+                  onClick={this.handleClick}
+                  src={window.blackUpload}
+                  alt=""
+                />
+                <input
+                  id="file-upload"
+                  type="file"
+                  onChange={this.handleUpload.bind(this)}
+                />
+              </div>
+              <h1>Image Preview:</h1>
+              <img className="img-preview" src={this.state.imageUrl} alt="" />
             </div>
-            
-        )
+          </div>
+        );
     }
 }
 

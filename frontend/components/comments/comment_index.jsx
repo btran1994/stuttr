@@ -29,8 +29,7 @@ class CommentIndex extends React.Component {
         return (
             didFetch ? (
                 <div className="comments-container" id="comments-container-id">
-                    <h1>Comments <strong>{selected.length}</strong> </h1>
-                    {form}
+                    <h3 className='comments-list-title'>Comments</h3>
                     <ul className="comments-ul">
                         {
                             selected.map(comment => {
@@ -46,8 +45,12 @@ class CommentIndex extends React.Component {
                             })
                         }
                     </ul>
+                    {form}
                 </div>
-            ) : null
+            ) : <div className="comments-container" id="comments-container-id">
+                    <h1 className='comments-list-title'>Comments</h1>
+                    {form}
+                </div>
         );
     };
 };

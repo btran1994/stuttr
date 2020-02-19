@@ -4,8 +4,6 @@ import { withRouter } from "react-router";
 import { createComment } from "../../actions/comment_actions";
 
 const mapState = (state, ownProps) => {
-    console.log(state, 'form state')
-    console.log(ownProps, 'form props')
     return {
         commentState: {
             body: ""
