@@ -15,6 +15,7 @@ class Api::CommentsController < ApplicationController
 
   def update
     @comment = Comment.includes(:user).find_by(id: params[:id])
+    p @comment
     if @comment.update(comment_params)
       render "api/comments/update"
     else

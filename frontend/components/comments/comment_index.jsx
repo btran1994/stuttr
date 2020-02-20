@@ -13,13 +13,16 @@ class CommentIndex extends React.Component {
     };
 
     render() {
+        // console.log(this.props, 'index props')
+        // console.log(this.state, 'index state')
         const {
             photo,
             comments,
             openModal,
             currentUserId,
             username,
-            destroyComment
+            destroyComment,
+            patchComment
         } = this.props;
 
         const didFetch = comments.length !== 0; //did it fetch comments, use for ternary
@@ -32,7 +35,7 @@ class CommentIndex extends React.Component {
                     <h3 className='comments-list-title'>Comments</h3>
                     <ul className="comments-ul">
                         {
-                            selected.map(comment => {
+                            selected.map((comment, idx) => {
                                 return (
                                     <CommentIndexItem
                                         key={comment.id}
@@ -40,7 +43,10 @@ class CommentIndex extends React.Component {
                                         openModal={openModal}
                                         currentUserId={currentUserId}
                                         username={username}
-                                        destroyComment={destroyComment} />
+                                        destroyComment={destroyComment}
+                                        idx={idx}
+                                        photo={photo}
+                                        patchComment={patchComment} />
                                 );
                             })
                         }

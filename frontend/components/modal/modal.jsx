@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import UploadContainer from '../../components/upload/upload_container'
+import EditCommentContainer from '../../components/comments/edit_comment_container'
 
 function Modal({ modal, closeModal }) {
     if (!modal) {
@@ -11,6 +12,9 @@ function Modal({ modal, closeModal }) {
     switch (modal) {
         case 'upload':
             component = <UploadContainer />;
+            break;
+        case 'editComment':
+            component = <EditCommentContainer />;
             break;
         default:
             return null;

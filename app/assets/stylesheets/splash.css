@@ -773,3 +773,12 @@ textarea#styled {
     margin-left: 16px;
 
 }
+
+.index-loader {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}

@@ -1,9 +1,15 @@
 import React, { useReducer } from 'react';
-import Spinner from "../loader/loader_component"
+import {css} from '@emotion/core';
+import CircleLoader from 'react-spinners/CircleLoader';
 
 class PhotoIndex extends React.Component {
     constructor(props) {
         super(props);
+        this.override = css`
+          display: block;
+          margin: 0 auto;
+          border-color: red;
+        `;
         
         this.handleClick = this.handleClick.bind(this)
     }
@@ -19,8 +25,17 @@ class PhotoIndex extends React.Component {
 
     render() {
         let photos = this.props.photos;
-        if (photos.length === 0) {
-            return null
+        if (photos.length < 13) {
+            return (
+                <div className="index-loader">
+                    <CircleLoader
+                        css={this.override}
+                        sizeUnit={"px"}
+                        size={50}
+                        color={"#000000"}
+                    />
+                </div>
+            );
         } else {
             return (
                 <ul className="photo-display">

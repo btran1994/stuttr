@@ -1,12 +1,13 @@
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import CommentIndex from "./comment_index";
-import { fetchComments, destroyComment } from "../../actions/comment_actions";
+import { fetchComments, destroyComment, patchComment } from "../../actions/comment_actions";
+import { openModal } from "../../actions/modal_actions"
 
 const mapState = ( state, ownProps ) => {
-    // console.log(state, 'container state')
     return {
         comments: Object.values(state.entities.comments),
+        photo: ownProps.photo,
         currentUserId: state.session.id,
         username: state.entities.users[state.session.id].username
     }
@@ -15,7 +16,9 @@ const mapState = ( state, ownProps ) => {
 const mapDispatch = dispatch => {
     return {
         fetchComments: () => dispatch(fetchComments()),
-        destroyComment: commentId => dispatch(destroyComment(commentId))
+        destroyComment: commentId => dispatch(destroyComment(commentId)),
+        openModal: modal => dispatch(openModal(modal)),
+        patchComment: comment => dispatch(patchComment(comment))
     }
 }
 

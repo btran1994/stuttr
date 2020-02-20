@@ -85,3 +85,18 @@ textarea {
     border-radius: 3px;
     font-size: 12px;
 }
+
+.comment-edit-form {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.comment-edit-submit {
+    border-radius: 3px;
+    background-color: rgb(158, 200, 255);
+    margin-top: 5px;
+}
+
+.edit-form {
+    font-size: 20px;
+}
