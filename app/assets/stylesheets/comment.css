@@ -32,6 +32,11 @@
 
 .comment-buttons {
     display: flex;
+    visibility: hidden;
+}
+
+li:hover .comment-buttons {
+    visibility: visible;
 }
 
 .comment-body {

@@ -110,6 +110,7 @@ class CommentIndexItem extends React.Component {
       ) : null;
     return (
       <li className="comment-list-item">
+        {/* <img src={this.props.pfp} alt=""/> */}
         <div className="comment-title">
           <h1>{this.props.username}</h1>
           <div className="comment-buttons">

@@ -1,6 +1,8 @@
 import React, { useReducer } from 'react';
 import {css} from '@emotion/core';
 import CircleLoader from 'react-spinners/CircleLoader';
+import Masonry from "react-masonry-component";
+import { masonryOptions } from '../exports'
 
 class PhotoIndex extends React.Component {
     constructor(props) {
@@ -38,27 +40,53 @@ class PhotoIndex extends React.Component {
             );
         } else {
             return (
-                <ul className="photo-display">
-                    {
-                        photos.map((photo) => {
-                            return (
-                                <li key={photo.id} className="bigphotocontainer">
-                                    <div className="photo-info-container">
-                                        <img className='hover' onClick={this.handleClick} id={photo.id} src={photo.imageUrl} alt=""/>
-                                        <div onClick={this.handleClick} id={photo.id} className='photo-stuff'>
-                                            {photo.title}
-                                            <br/>
-                                            <br/>
-                                            {photo.user.username}
-                                        </div>
-                                        <div onClick={this.handleClick} id={photo.id} className="photo-info-background">a</div>
-                                    </div>
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-
+              <div className="grid-holder">
+                <Masonry
+                  className={"grid"}
+                  elementType={"div"}
+                  options={masonryOptions}
+                  disableImagesLoaded={false}
+                  updateOnEachImageLoad={false}
+                >
+                  {photos.map(photo => {
+                    return (
+                      <li
+                        key={photo.id}
+                        className="bigphotocontainer"
+                        style={{ listStyle: "none" }}
+                      >
+                        <div className="photo-info-container">
+                          <img
+                            className="hover"
+                            onClick={this.handleClick}
+                            id={photo.id}
+                            src={photo.imageUrl}
+                            style={{ width: 300 }}
+                            alt=""
+                          />
+                          <div
+                            onClick={this.handleClick}
+                            id={photo.id}
+                            className="photo-stuff"
+                          >
+                            {photo.title}
+                            <br />
+                            <br />
+                            {photo.user.username}
+                          </div>
+                          <div
+                            onClick={this.handleClick}
+                            id={photo.id}
+                            className="photo-info-background"
+                          >
+                            a
+                          </div>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </Masonry>
+              </div>
             );
         }
         

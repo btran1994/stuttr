@@ -5,11 +5,15 @@ import { fetchComments, destroyComment, patchComment } from "../../actions/comme
 import { openModal } from "../../actions/modal_actions"
 
 const mapState = ( state, ownProps ) => {
+    console.log(state, 'com con state')
+    console.log(ownProps, 'com con props')
     return {
         comments: Object.values(state.entities.comments),
         photo: ownProps.photo,
         currentUserId: state.session.id,
-        username: state.entities.users[state.session.id].username
+        username: state.entities.users[state.session.id].username,
+        pfp: state.entities.users[state.session.id].imageUrl
+
     }
 }
 

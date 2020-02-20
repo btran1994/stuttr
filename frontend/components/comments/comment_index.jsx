@@ -22,7 +22,8 @@ class CommentIndex extends React.Component {
             currentUserId,
             username,
             destroyComment,
-            patchComment
+            patchComment,
+            pfp
         } = this.props;
 
         const didFetch = comments.length !== 0; //did it fetch comments, use for ternary
@@ -46,7 +47,8 @@ class CommentIndex extends React.Component {
                                         destroyComment={destroyComment}
                                         idx={idx}
                                         photo={photo}
-                                        patchComment={patchComment} />
+                                        patchComment={patchComment}
+                                        pfp={pfp} />
                                 );
                             })
                         }

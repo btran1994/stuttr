@@ -3,7 +3,11 @@
 .splash-main {
     display: flex;
     width: 100%;
-    background-size: contain;
+    /* height: auto; */
+    position: absolute;
+    justify-content: center;
+    /* background-color: rgb(58, 58, 58); */
+    /* background-size: cover; */
 }
 
 .root {
@@ -278,7 +282,7 @@ input:focus {
     border: 1px white solid;
     background-color: white;
     border-radius: 5px;
-    min-width: 80px;
+    min-width: 100px;
     line-height: 36px;
     font-family: 'Montserrat', sans-serif;
     height: 60%;
