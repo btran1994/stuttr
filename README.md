@@ -10,7 +10,8 @@ Current functions:
 * Allow users to upload photos with titles/descriptions
 * Show all photos uploaded by all users
 * Show individual photos when selected by a logged in user
-* Built with React and Redux for front end and Ruby on Rails/PostgreSQL for backend
+* Allow users to comment on photos and edit/delete their own comments
+* User profile pages with links to their albums
 
 ## Technologies
 * Javascript ES6
@@ -71,7 +72,6 @@ Once a user has selected a photo and filled out the fields for title/description
 Utilizes modals for the upload function instead of redirecting to different frontend routes.
 
 ## Planned Features
-* Comments
 * Photo Search
 * Photo Tags
 * Groups
