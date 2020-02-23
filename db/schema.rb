@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2020_02_17_184936) do
     t.integer "group_id"
     t.integer "album_id"
     t.string "title", null: false
+    t.string "pfp"
     t.text "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

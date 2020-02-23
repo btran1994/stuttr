@@ -29,3 +29,11 @@ export const deletePhoto = id => (
     })
 )
 
+export const getUser = id => {
+  const user_id = parseInt(id);
+  return $.ajax({
+    method: "GET",
+    url: `api/users/${user_id}`
+  });
+};
+

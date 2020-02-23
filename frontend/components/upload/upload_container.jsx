@@ -13,7 +13,8 @@ const mapState = (state, imageUrl) => {
             user_id: state.entities.users[state.session.id].id,
             title: "",
             description: "",
-            imageUrl
+            imageUrl,
+            pfp: state.entities.users[state.session.id].imageUrl
         }
     }
 };

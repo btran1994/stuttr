@@ -9,6 +9,7 @@ class PhotoShow extends React.Component {
     componentDidMount() {
         this.props.fetchPhoto(this.props.id);
         this.props.fetchComments()
+        this.props.getUser(this.props.currentUser.id)
     }
 
     componentDidUpdate(prevProps) {
@@ -18,15 +19,18 @@ class PhotoShow extends React.Component {
     }
 
     render() {
+        console.log(this.props, 'show props')
+        console.log(this.state, 'show state')
         let photo = this.props.photo
         if (photo) {
             return(
                 <div className="photo-show">
                     <li className="photo-wrap">
-                        <img src={photo.imageUrl} alt="" />
+                        <img className="photo-show-img" src={photo.imageUrl} alt="" />
                     </li>
                     <li className="photo-title-description">
                         <div className="profile-pic">
+                            {/* <img src={photo.user} alt=""/> */}
                         </div>
                         <div className="photo-user">
                             <h1>{photo.user.username}</h1>

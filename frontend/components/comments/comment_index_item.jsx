@@ -13,12 +13,6 @@ class CommentIndexItem extends React.Component {
     };
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.comment.body !== prevProps.comment.body) {
-      this.setState({body: this.props.comment.body})
-    }
-  }
-
   updateComment() {
     return e =>
       this.setState({
@@ -50,6 +44,7 @@ class CommentIndexItem extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let comment = Object.assign(this.state, { body: this.state.body });
+    console.log(comment, 'comment')
     this.props.patchComment(comment);
     const commentEdit = document.getElementsByClassName("comment-edit-form")[
       this.props.idx
@@ -110,13 +105,17 @@ class CommentIndexItem extends React.Component {
       ) : null;
     return (
       <li className="comment-list-item">
-        {/* <img src={this.props.pfp} alt=""/> */}
-        <div className="comment-title">
-          <h1>{this.props.username}</h1>
+        <div className="header-pfp">
+          <div className="pfp-comment">
+            <img className="comment-pfp" src={this.props.pfp} alt="" />
+          </div>
           <div className="comment-buttons">
             <div className="edit-button">{editComment}</div>
             <div className="delete-button">{deleteComment}</div>
           </div>
+        </div>
+        <div className="comment-title">
+          <h1>{this.props.username}</h1>
         </div>
         <div className="comment-body">{this.editTitleForm()}</div>
       </li>

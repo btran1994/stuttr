@@ -18,6 +18,7 @@ class UploadForm extends React.Component {
         newPhoto.append('photo[description]', this.state.description)
         newPhoto.append('photo[user_id]', this.props.photo.user_id)
         newPhoto.append('photo[image]', this.state.imageFile)
+        newPhoto.append('photo[pfp]', this.state.pfp)
         this.props.processForm(newPhoto).then(photo => {
             console.log(photo, 'photo')
         })
@@ -50,6 +51,7 @@ class UploadForm extends React.Component {
     }
 
     render() {
+      console.log(this.state, 'upload form')
         return (
           <div className="uploady">
             <h1 className="upload-text">Upload Photo:</h1>

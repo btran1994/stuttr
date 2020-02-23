@@ -12,12 +12,23 @@ class PhotoIndex extends React.Component {
           margin: 0 auto;
           border-color: red;
         `;
+
+        this.didLoad = this.props.loaded;
         
         this.handleClick = this.handleClick.bind(this)
     }
 
+    loaded() {
+        return 
+    }
+
     componentDidMount() {
-        this.props.fetchPhotos();
+        this.props.fetchPhotos()
+            .then(this.didLoad = true);
+    }
+
+    handleLoad() {
+      this.didLoad = true;
     }
 
     handleClick(e) {
@@ -27,7 +38,7 @@ class PhotoIndex extends React.Component {
 
     render() {
         let photos = this.props.photos;
-        if (photos.length < 13) {
+        if (this.didLoad === false) {
             return (
                 <div className="index-loader">
                     <CircleLoader
@@ -41,52 +52,53 @@ class PhotoIndex extends React.Component {
         } else {
             return (
               <div className="grid-holder">
-                <Masonry
-                  className={"grid"}
-                  elementType={"div"}
-                  options={masonryOptions}
-                  disableImagesLoaded={false}
-                  updateOnEachImageLoad={false}
-                >
-                  {photos.map(photo => {
-                    return (
-                      <li
-                        key={photo.id}
-                        className="bigphotocontainer"
-                        style={{ listStyle: "none" }}
-                      >
-                        <div className="photo-info-container">
-                          <img
-                            className="hover"
-                            onClick={this.handleClick}
-                            id={photo.id}
-                            src={photo.imageUrl}
-                            style={{ width: 300 }}
-                            alt=""
-                          />
-                          <div
-                            onClick={this.handleClick}
-                            id={photo.id}
-                            className="photo-stuff"
-                          >
-                            {photo.title}
-                            <br />
-                            <br />
-                            {photo.user.username}
+                  <Masonry
+                    className={"grid"}
+                    elementType={"div"}
+                    options={masonryOptions}
+                    disableImagesLoaded={false}
+                    updateOnEachImageLoad={false}
+                  >
+                    {photos.map(photo => {
+                      return (
+                        <li
+                          key={photo.id}
+                          className="bigphotocontainer"
+                          style={{ listStyle: "none" }}
+                        >
+                          <div className="photo-info-container">
+                            <img
+                              className="hover"
+                              onClick={this.handleClick}
+                              id={photo.id}
+                              src={photo.imageUrl}
+                              style={{ width: 300 }}
+                              alt=""
+                            />
+                            <div
+                              onClick={this.handleClick}
+                              id={photo.id}
+                              className="photo-stuff"
+                            >
+                              {photo.title}
+                              <br />
+                              <br />
+                              {photo.user.username}
+                            </div>
+                            <div
+                              onClick={this.handleClick}
+                              id={photo.id}
+                              className="photo-info-background"
+                            >
+                              a
+                            </div>
                           </div>
-                          <div
-                            onClick={this.handleClick}
-                            id={photo.id}
-                            className="photo-info-background"
-                          >
-                            a
-                          </div>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </Masonry>
+                        </li>
+                      );
+                    })}
+                  </Masonry>
               </div>
+                // </OnImagesLoaded>
             );
         }
         

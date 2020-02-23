@@ -5,6 +5,7 @@ class CreatePhotos < ActiveRecord::Migration[5.2]
       t.integer :group_id
       t.integer :album_id
       t.string :title, null: false
+      t.string :pfp
       t.text :description, null: false
 
 

@@ -1,4 +1,4 @@
-json.extract! user, :id, :username
+json.extract! user, :username, :id, :created_at
 
 if user.pfp.attached?
     json.imageUrl url_for(user.pfp)

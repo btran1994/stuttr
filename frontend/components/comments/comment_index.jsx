@@ -12,9 +12,22 @@ class CommentIndex extends React.Component {
         this.props.fetchComments();
     };
 
+    componentDidUpdate(prevProps) {
+        const prevComm = Object.values(prevProps.comments)
+        if (prevComm.length === 0) {
+            return null;
+        } else if (this.props.comments.length !== prevComm.length) {
+            this.props.fetchComments();
+        } else {
+            Object.values(this.props.comments).forEach((comment, idx) => {
+                if ((comment.body !== prevComm[idx].body) && !!prevComm[idx].body) {
+                    this.props.fetchComments();
+                }
+            })
+        }
+    }
+
     render() {
-        // console.log(this.props, 'index props')
-        // console.log(this.state, 'index state')
         const {
             photo,
             comments,

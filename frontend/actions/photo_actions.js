@@ -30,6 +30,19 @@ export const clearPhotoErrors = () => ({
     type: CLEAR_PHOTO_ERRORS
 });
 
+const receivePageOwner = owner => {
+  return {
+    type: RECEIVE_PAGE_OWNER,
+    owner
+  };
+};
+
+export const getUser = id => dispatch => {
+  return PhotoAPIUtil.getUser(id).then(user =>
+    dispatch(receivePageOwner(user))
+  );
+};
+
 export const fetchPhoto = id => dispatch => (
     PhotoAPIUtil.fetchPhoto(id).then(photo => (
         dispatch(receivePhoto(photo))

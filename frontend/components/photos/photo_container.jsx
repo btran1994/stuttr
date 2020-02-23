@@ -4,7 +4,8 @@ import PhotoIndex from './photo_index';
 
 const mapState = state => {
     return {
-        photos: Object.values(state.entities.photos)
+        photos: Object.values(state.entities.photos),
+        loaded: false
     }
 };
 
