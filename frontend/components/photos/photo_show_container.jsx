@@ -5,14 +5,11 @@ import { fetchComments } from '../../actions/comment_actions'
 
 
 const mapState = (state, ownProps) => {
-    // console.log(state, 'show cont')
-    // console.log(ownProps, 'show own')
-    // console.log(Object.values(state.entities.photos)[0], 'photo containter');
     return {
         currentUser: state.entities.users[state.session.id],
         photo: state.entities.photos[ownProps.match.params.id],
+        // owner: 
         id: ownProps.match.params.id,
-        // pfp: (Object.values(state.entities.photos)[0]).imageUrl
     }
 };
 

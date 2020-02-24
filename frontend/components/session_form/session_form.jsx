@@ -90,8 +90,6 @@ class SessionForm extends React.Component {
                         </div>
                         <br/>
                         <p className="errors">{this.props.errors[0]}</p>
-                        {/* Please {this.props.formType} or {this.props.navLink}
-                        {this.renderErrors()} */}
                         <input className="session-submit" type="submit" value={buttonText} />
                         <button onClick={this.handleSubmit} className="demo-button">Demo Login</button>
                         <br/>

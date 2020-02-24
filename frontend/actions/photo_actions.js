@@ -5,6 +5,7 @@ export const RECEIVE_PHOTOS = 'RECEIVE_PHOTOS';
 export const REMOVE_PHOTO = 'REMOVE_PHOTO';
 export const RECEIVE_PHOTO_ERRORS = 'RECEIVE_PHOTO_ERRORS';
 export const CLEAR_PHOTO_ERRORS = 'CLEAR_PHOTO_ERRORS';
+export const RECEIVE_PAGE_OWNER = "RECEIVE_PAGE_OWNER";
 
 export const receivePhoto = photo => ({
     type: RECEIVE_PHOTO,

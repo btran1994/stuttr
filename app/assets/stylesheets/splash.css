@@ -814,6 +814,7 @@ textarea#styled {
 
 .dropdown-list li {
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 .dropdown-name {

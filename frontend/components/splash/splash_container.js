@@ -3,10 +3,11 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import { logout } from '../../actions/session_actions';
 import Splash from './splash';
 
+
 const mapStateToProps = ({ session, entities: { users } }) => {
     return {
-        currentUser: users[session.id],
-        imageUrl: ""
+      currentUser: users[session.id],
+      imageUrl: "",
     };
 };
 

@@ -6,6 +6,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import PhotoIndexContainer from './photos/photo_container';
 import PhotoShowContainer from './photos/photo_show_container';
+import ProfileContainer from './profile/profile_container'
 import Splash from "./splash/splash";
 import Modal from './modal/modal';
 
@@ -24,7 +25,8 @@ const App = () => (
       <ProtectedRoute exact path="/photos/:id" component={PhotoShowContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <ProtectedRoute exact path="/photos" component={PhotoIndexContainer} />
+      <ProtectedRoute exact path="/" component={PhotoIndexContainer} />
+      <ProtectedRoute exact path="/users/:id" component={ProfileContainer} />
       <Route path="*">
         <Redirect to="/" />
       </Route>

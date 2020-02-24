@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 class Splash extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = this.props
-    // console.log(this.state, 'initial state')
+    this.location = {
+      pathname: `/users/${this.props.currentUser.id}`
+    };
   }
 
   handleDropdown() {
@@ -17,7 +18,18 @@ class Splash extends React.Component {
     }
   }
 
+  handleClick(e) {
+    if (!(this.props.location.pathname).includes("users")) {
+      this.props.history.replace(`users/${this.props.currentUser.id}`);
+      this.handleDropdown()
+    } else {
+      this.handleDropdown()
+    }
+  }
+
   render() {
+    console.log(this.props, 'nav proprs')
+    console.log(this.state, 'nav state')
     if (this.props.currentUser) {
       return (
         <div className="header-buttons">
@@ -29,12 +41,19 @@ class Splash extends React.Component {
               alt=""
             />
             <div className="profile-dropdown">
-              <img className="profile-picture" onClick={this.handleDropdown.bind(this)} src={this.props.currentUser.imageUrl}/>
+              <img
+                className="profile-picture"
+                onClick={this.handleDropdown.bind(this)}
+                src={this.props.currentUser.imageUrl}
+              />
             </div>
             <div id="dropdown">
               <ul className="dropdown-list">
                 <li className="dropdown-name">
                   Hi, {this.props.currentUser.username}!
+                </li>
+                <li className="header-button">
+                  <Link to={this.location}>Profile</Link>
                 </li>
                 <li className="header-button" onClick={this.props.logout}>
                   Log Out
