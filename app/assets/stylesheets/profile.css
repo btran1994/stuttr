@@ -1,11 +1,22 @@
+.profile-page {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
 .profile-banner-box {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    margin-top: 200px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     text-align: center;
+    /* margin-left: 50px; */
+    /* margin-top: 75px; */
 }
 
 .profile-banner-pic {
@@ -13,4 +24,55 @@
     height: 100%;
     object-fit: cover;
     overflow: hidden;    
+}
+
+.background-banner {
+    height: 314px;
+    width: 100%;
+    background-image: url('https://combo.staticflickr.com/pw/images/coverphoto00_h.jpg.v3');
+    background-position: center;
+    /* display: flex; */
+}
+
+.profile-banner {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pfp-username {
+    display: flex;
+}
+
+.profile-username {
+    position: relative;
+    top: 275px;
+    left: 20px;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.join-date {
+    position: relative;
+    top: 275px;
+    left: 20px;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.profile-navbar {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.user-grid-holder {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    margin-top: 400px;
+    justify-content: center;
+    padding-bottom: 100px;
 }

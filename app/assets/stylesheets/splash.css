@@ -336,6 +336,9 @@ h6 {
 .header-buttons {
     width: 100%;
     height: 64px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 175px;
 }
 
 .errors {
@@ -539,6 +542,8 @@ h6 {
     text-align: left;
     font-family: 'Montserrat', sans-serif;
     z-index: 1;
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -823,4 +828,21 @@ textarea#styled {
     background: white;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+}
+
+.header-links {
+    margin-top: 20px;
 }

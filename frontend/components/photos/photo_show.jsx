@@ -21,8 +21,6 @@ class PhotoShow extends React.Component {
     }
 
     render() {
-        // console.log(this.props, 'show props')
-        // console.log(this.uploader, 'show state')
         console.log(this.props.history, 'show history')
         let photo = this.props.photo
         if (photo) {
@@ -33,7 +31,6 @@ class PhotoShow extends React.Component {
                     </li>
                     <li className="photo-title-description">
                         <div className="profile-pic">
-                            {/* <img src={this.state.owner.owner.imageUrl} alt=""/> */}
                         </div>
                         <div className="photo-user">
                             <h1>{photo.user.username}</h1>

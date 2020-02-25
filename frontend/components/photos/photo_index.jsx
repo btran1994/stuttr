@@ -14,12 +14,16 @@ class PhotoIndex extends React.Component {
         `;
 
         this.didLoad = this.props.loaded;
-        
+        this.handleImagesLoaded = this.handleImagesLoaded.bind(this)
         this.handleClick = this.handleClick.bind(this)
     }
 
     loaded() {
         return 
+    }
+
+    handleImagesLoaded(imagesLoadedInstance) {
+        this.render();
     }
 
     componentDidMount() {
@@ -52,53 +56,54 @@ class PhotoIndex extends React.Component {
         } else {
             return (
               <div className="grid-holder">
-                  <Masonry
-                    className={"grid"}
-                    elementType={"div"}
-                    options={masonryOptions}
-                    disableImagesLoaded={false}
-                    updateOnEachImageLoad={false}
-                  >
-                    {photos.map(photo => {
-                      return (
-                        <li
-                          key={photo.id}
-                          className="bigphotocontainer"
-                          style={{ listStyle: "none" }}
-                        >
-                          <div className="photo-info-container">
-                            <img
-                              className="hover"
-                              onClick={this.handleClick}
-                              id={photo.id}
-                              src={photo.imageUrl}
-                              style={{ width: 300 }}
-                              alt=""
-                            />
-                            <div
-                              onClick={this.handleClick}
-                              id={photo.id}
-                              className="photo-stuff"
-                            >
-                              {photo.title}
-                              <br />
-                              <br />
-                              {photo.user.username}
-                            </div>
-                            <div
-                              onClick={this.handleClick}
-                              id={photo.id}
-                              className="photo-info-background"
-                            >
-                              a
-                            </div>
+                <Masonry
+                  className={"grid"}
+                  elementType={"div"}
+                  options={masonryOptions}
+                  // disableImagesLoaded={false}
+                  onImagesLoaded={this.handleImagesLoaded}
+                  updateOnEachImageLoad={false}
+                >
+                  {photos.map(photo => {
+                    return (
+                      <li
+                        key={photo.id}
+                        className="bigphotocontainer"
+                        style={{ listStyle: "none" }}
+                      >
+                        <div className="photo-info-container">
+                          <img
+                            className="hover"
+                            onClick={this.handleClick}
+                            id={photo.id}
+                            src={photo.imageUrl}
+                            style={{ width: 300 }}
+                            alt=""
+                          />
+                          <div
+                            onClick={this.handleClick}
+                            id={photo.id}
+                            className="photo-stuff"
+                          >
+                            {photo.title}
+                            <br />
+                            <br />
+                            {photo.user.username}
                           </div>
-                        </li>
-                      );
-                    })}
-                  </Masonry>
+                          <div
+                            onClick={this.handleClick}
+                            id={photo.id}
+                            className="photo-info-background"
+                          >
+                            a
+                          </div>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </Masonry>
               </div>
-                // </OnImagesLoaded>
+              // </OnImagesLoaded>
             );
         }
         
