@@ -5,7 +5,7 @@ class Splash extends React.Component {
   constructor(props) {
     super(props);
     this.profile = {
-      pathname: `/users/${this.props.currentUser.id}`
+      pathname: ``
     };
 
     this.photoLink = {
@@ -24,6 +24,7 @@ class Splash extends React.Component {
 
   render() {
     if (this.props.currentUser) {
+      this.profile.pathname = `/users/${ this.props.currentUser.id }`
       return (
         <div className="header-buttons">
           <div className="header-links">
