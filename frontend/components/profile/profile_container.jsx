@@ -4,7 +4,6 @@ import ProfilePage from "./profile";
 import { fetchPhoto, fetchPhotos } from "../../actions/photo_actions";
 
 const mapState = state => {
-    console.log(state, 'profile cont state')
   return {
       currentUser: state.entities.users[state.session.id],
       photos: state.entities.photos

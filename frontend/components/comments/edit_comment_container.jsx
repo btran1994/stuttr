@@ -5,7 +5,6 @@ import { closeModal } from "../../actions/modal_actions"
 import patchComment from "../../actions/comment_actions";
 
 const mapStateToProps = state => {
-console.log(state, 'edit state') 
   return {
     modal: state.ui.modal
   };

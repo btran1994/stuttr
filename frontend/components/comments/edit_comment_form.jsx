@@ -36,7 +36,6 @@ class EditCommentForm extends React.Component {
   }
 
   render() {
-    console.log(this.props, "edit props")
     return (
       <form className="edit-comment-form" onSubmit={this.handleSubmit}>
         <textarea

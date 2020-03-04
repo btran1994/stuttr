@@ -21,7 +21,6 @@ class PhotoShow extends React.Component {
     }
 
     render() {
-        console.log(this.props.history, 'show history')
         let photo = this.props.photo
         if (photo) {
             return(

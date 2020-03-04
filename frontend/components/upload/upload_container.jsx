@@ -6,7 +6,6 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 import UploadForm from './upload_form';
 
 const mapState = (state, imageUrl) => {
-    console.log(state,'upload state')
     return {
         formType: 'upload',
         photo: {

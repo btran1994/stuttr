@@ -20,12 +20,10 @@ class ProfilePage extends React.Component {
   }
 
   handleClick(e) {
-      console.log(e.target, 'click')
     this.props.history.replace(`photos/${e.target.id}`);
   }
 
   render() {
-    console.log(this.props, "profile props");
     const photoArray = Object.values(this.props.photos);
     let count = 0;
     if (photoArray.length > 0) {

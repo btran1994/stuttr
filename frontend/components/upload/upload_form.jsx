@@ -7,7 +7,6 @@ class UploadForm extends React.Component {
     }
 
     handleClick() {
-        console.log('click')
         $('#file-upload').trigger('click')
     }
 
@@ -20,7 +19,6 @@ class UploadForm extends React.Component {
         newPhoto.append('photo[image]', this.state.imageFile)
         newPhoto.append('photo[pfp]', this.state.pfp)
         this.props.processForm(newPhoto).then(photo => {
-            console.log(photo, 'photo')
         })
         this.props.closeModal();
     }
@@ -36,11 +34,9 @@ class UploadForm extends React.Component {
         if (file) {
             reader.readAsDataURL(file)
         } else {
-            console.log(this.state, 'invalid?')
         }
 
         if (file) {
-            console.log('hello')
         }
         this.forceUpdate();
 
@@ -51,7 +47,6 @@ class UploadForm extends React.Component {
     }
 
     render() {
-      console.log(this.state, 'upload form')
         return (
           <div className="uploady">
             <h1 className="upload-text">Upload Photo:</h1>

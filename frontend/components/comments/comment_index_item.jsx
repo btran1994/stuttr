@@ -44,7 +44,6 @@ class CommentIndexItem extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let comment = Object.assign(this.state, { body: this.state.body });
-    console.log(comment, 'comment')
     this.props.patchComment(comment);
     const commentEdit = document.getElementsByClassName("comment-edit-form")[
       this.props.idx
